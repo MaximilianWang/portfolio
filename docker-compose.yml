@@ -5,8 +5,8 @@ services:
       context: ./
       dockerfile: Dockerfile
       target: development
-    depends_on:
-      - db
+#    depends_on:
+#      - db
     ports:
       - "${WEB_PORT:-8000}:8000"
     volumes:
@@ -27,9 +27,9 @@ services:
       MONGO_URL: mongodb://db:27017/mern-starter
     stdin_open: true
     tty: true
-  db:
-    image: mongo:latest
-    volumes:
-      - dbdata:/data/db
+  #db:
+  #  image: mongo:latest
+  #  volumes:
+  #    - dbdata:/data/db
 volumes:
   dbdata:
