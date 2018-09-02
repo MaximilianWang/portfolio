@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-// import { connect } from 'react-redux';
+import { connect } from 'react-redux';
 
 // Import Style
 import styles from './App.css';
@@ -65,11 +65,12 @@ App.propTypes = {
 };
 
 // Retrieve data from store as props
-/*
+
 function mapStateToProps(store) {
   return {
+    useLater: store, // todo
   };
 }
 
 export default connect(mapStateToProps)(App);
-*/
+
