@@ -1,0 +1,14 @@
+.hero-pic {
+    height: 80px;
+}
+    
+.hero {
+    display: inline-block; 
+    height: 300px;
+    width : 300px;
+}
+      
+
+.hero-title {
+    font-size: 1.5em;
+}

@@ -18,6 +18,7 @@ render(
   mountApp
 );
 
+
 // For hot reloading of react components
 if (module.hot) {
   module.hot.accept('./App', () => {
