@@ -14,8 +14,6 @@ import classNames from 'classnames';
 import styles from './Hero.css';
 import mainPic from './fake_portfolio.jpg';
 
-
-
 class Hero extends React.Component {
     state = {
         value: 0,
@@ -27,7 +25,6 @@ class Hero extends React.Component {
 
 
     render() {
-
         return (
             <React.Fragment>
                 <Avatar
@@ -43,7 +40,6 @@ class Hero extends React.Component {
     old_render() {
       const { classes } = this.props;
       const { value } = this.state;
-  
       return (
         <div className={classes.root}>
           <AppBar position="static">

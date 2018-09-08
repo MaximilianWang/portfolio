@@ -1,12 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router';
-
 import { withStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
-import Tabs from '@material-ui/core/Tabs';
-import Tab from '@material-ui/core/Tab';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 // Import Style
@@ -22,7 +18,7 @@ function TabContainer(props) {
 
 TabContainer.propTypes = {
   children: PropTypes.node.isRequired,
-}
+};
 
 const styles = theme => ({
   root: {
@@ -47,17 +43,18 @@ class Header extends React.Component {
 
   render() {
     const { classes } = this.props;
-    const { value } = this.state;
+    // const { value } = this.state;
 
     return (
       <AppBar position="static" color="default" className={classes.appBar}>
         <Toolbar>
           <Typography variant="title" color="inherit" className={classes.toolbarTitle}>
-          <Button align="left"
-            size="large"
+            <Button
+              align="left"
+              size="large"
             >All Maxed Out</Button>
           </Typography>
-          
+
           <Button variant="outlined" size="small">
             About
           </Button>
