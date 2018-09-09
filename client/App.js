@@ -36,9 +36,6 @@ export class App extends Component {
       insertionPoint: document.getElementById('jss-insertion-point'),
     });
 
-    console.log(1);
-    console.log(this.props.store);
-
     return (
       <JssProvider jss={jss} generateClassName={generateClassName}>
         <Provider store={this.props.store}>

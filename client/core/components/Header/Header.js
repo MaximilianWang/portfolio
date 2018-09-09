@@ -5,57 +5,33 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import styles from './Header.css';
+import { Link } from 'react-router';
 // Import Style
-
-
-function TabContainer(props) {
-  return (
-    <Typography component="div" style={{ padding: 8 * 3 }}>
-      {props.children}
-    </Typography>
-  );
-}
-
-TabContainer.propTypes = {
-  children: PropTypes.node.isRequired,
-};
-
-const styles = theme => ({
-  root: {
-    flexGrow: 1,
-    backgroundColor: theme.palette.background.paper,
-  },
-
-  toolbarTitle: {
-    flex: 1,
-  },
-});
 
 class Header extends React.Component {
   state = {
     value: 0,
   };
 
-  handleChange = (event, value) => {
-    this.setState({ value });
+  handlePageNavigateClick = (event, value) => {
   };
 
 
   render() {
-    const { classes } = this.props;
-    // const { value } = this.state;
-
     return (
-      <AppBar position="static" color="default" className={classes.appBar}>
+      <AppBar position="static" color="default">
         <Toolbar>
-          <Typography variant="title" color="inherit" className={classes.toolbarTitle}>
+          <Typography variant="title" color="inherit" className={styles.toolbarTitle}>
             <Button
+              component={Link}
+              to="/"
               align="left"
               size="large"
             >All Maxed Out</Button>
           </Typography>
 
-          <Button variant="outlined" size="small">
+          <Button component={Link} to="/about" variant="outlined" size="small">
             About
           </Button>
           <Button variant="outlined" size="small">
@@ -95,9 +71,5 @@ class Header extends React.Component {
   */
 }
 
-Header.propTypes = {
-  classes: PropTypes.object.isRequired,
-};
-
-export default withStyles(styles)(Header);
+export default Header;
 
