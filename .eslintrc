@@ -22,6 +22,12 @@
      "no-underscore-dangle" : 0,
      "max-len": [1, 180, 4],
      "arrow-body-style": [0],
+     "no-unused-expressions" : "off",
+     "no-unused-labels" : "off",
+     "no-unused-vars" : "off",
+     "indent" : "off",
+     "react/jsx-indent" : "off",
+     "react/jsx-indent-props" : "off",
      // "react/jsx-no-bind": [0], //uncomment after ready
      // "import/no-unresolved": [0] // Until import plugin supports webpack 2 resolveModules
   }
