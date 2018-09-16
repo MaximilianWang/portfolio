@@ -34,7 +34,7 @@ class Header extends React.Component {
           <Button component={Link} to="/about" variant="outlined" size="small">
             About
           </Button>
-          <Button variant="outlined" size="small">
+          <Button component={Link} to="/resume" variant="outlined" size="small">
             Resume
           </Button>
           <Button variant="outlined" size="small">

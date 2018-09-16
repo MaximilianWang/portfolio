@@ -28,6 +28,14 @@ export default (
         });
       }}
     />
+    <Route
+      path="/resume"
+      getComponent={(nextState, cb) => {
+        require.ensure([], require => {
+          cb(null, require('./resume/Resume').default);
+        });
+      }}
+    />
   </Route>
 
 );

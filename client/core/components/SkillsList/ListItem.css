@@ -1,0 +1,6 @@
+.skillItem {
+    width:100%;
+    min-height: 250px;
+    max-height: 250px;
+    overflow: visible;
+}

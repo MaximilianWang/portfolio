@@ -3,6 +3,7 @@
 }
     
 .hero {
+    margin-top: 50px;
     display: inline-block; 
     height: 300px;
     width : 300px;
