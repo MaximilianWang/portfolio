@@ -13,6 +13,7 @@ const isDevMode = process.env.NODE_ENV === 'development' || false;
 
 // Run Webpack dev server in development mode
 if (isDevMode) {
+  console.log('Running in production mode');
   // Webpack Requirements
   // eslint-disable-next-line global-require
   const webpack = require('webpack');
@@ -31,6 +32,8 @@ if (isDevMode) {
     },
   }));
   app.use(webpackHotMiddleware(compiler));
+} else {
+  console.log('Running in production mode');
 }
 
 // React And Redux Setup
