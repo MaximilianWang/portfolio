@@ -28,6 +28,7 @@ function renderFullPage(html, initialState, css) {
     <!doctype html>
     <html>
       <head>
+        <style id="jss-server-side">${css}</style>
         <noscript id="jss-insertion-point"></noscript>
         
         ${head.base.toString()}
@@ -42,7 +43,7 @@ function renderFullPage(html, initialState, css) {
       </head>
       <body>
         <div id="root">${process.env.NODE_ENV === 'production' ? html : `<div>${html}</div>`}</div>
-        <style id="jss-server-side">${css}</style>
+        
         <script>
           window.__INITIAL_STATE__ = ${JSON.stringify(initialState)};
           ${isProdMode ?
@@ -65,7 +66,12 @@ export function handleRenderError(err) {
 }
 
 export function handleDrawPage(store, renderProps) {
+
+
+
+
   // Create a sheetsRegistry instance.
+
   const sheetsRegistry = new SheetsRegistry();
 
   // Create a sheetsManager instance.

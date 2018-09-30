@@ -3,10 +3,15 @@ import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import Popover from '@material-ui/core/Popover';
 import { Typography } from '@material-ui/core';
-import styles from './ListItem.css';
+//import styles from './ListItem.css';
 import { render } from "react-dom";
 import posed from "react-pose";
 import styled from "styled-components";
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemIcon from '@material-ui/core/ListItemIcon';
+import ListItemText from '@material-ui/core/ListItemText';
+import Avatar from '@material-ui/core/Avatar';
 
 //const images = require.context('../../../assets/images', true);
 // Import Style
@@ -54,7 +59,7 @@ const Box = posed.div({
 
 
 
-export class ListItem extends React.Component {
+export class SleekerListItem extends React.Component {
     state = {
         anchorEl: null,
         in: "bottom",
@@ -82,27 +87,21 @@ export class ListItem extends React.Component {
         // onClick={this.handleClick} onMouseOver={this.handleClick} onMouseOut={this.handleClose}
 
         return (
-            <Grid item xs={4}>
-                <Paper>
+            <Grid item xs={6}>
 
-                    <Square pose={this.state.in} onClick={this.handleClick} onMouseOver={this.handleClick} onMouseOut={this.handleClose} className={styles.skillItem} style={{ background: `#FFF url('${imgsrc}') no-repeat`, backgroundSize: `contain`, backgroundPosition: `center`}} >
-                        {this.state.in === "top" ? (
-                            <div>
-                                {details.description}
-                                {this.state.in}
-                            </div>
-                        ) : (
-                                <div>
-                                    {details.name}
-                                    {details.label}
-                                    {this.state.in}
-                                </div>
-                            )}
+                <div onClick={this.handleClick} onMouseOver={this.handleClick} onMouseOut={this.handleClose}>
+                    <List component="nav">
+                        <ListItem button>
+                            <Avatar>
+                                <img src={imgsrc} />
+                            </Avatar>
 
-                    </Square>
+                            <ListItemText inset primary={details.name} />
+                        </ListItem>
+                    </List>
 
+                </div>
 
-                </Paper>
 
             </Grid >
 
@@ -110,4 +109,4 @@ export class ListItem extends React.Component {
     }
 }
 
-export default ListItem;
+export default SleekerListItem;

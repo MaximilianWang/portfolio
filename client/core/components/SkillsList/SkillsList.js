@@ -1,5 +1,6 @@
 import React from 'react';
-import { ListItem } from './ListItem';
+//import { ListItem } from './ListItem';
+import { SleekerListItem } from './SleekerListItem';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 
@@ -22,7 +23,7 @@ class SkillsList extends React.Component {
     }
 
     renderListItem(i, skillDetails) {
-        return <ListItem
+        return <SleekerListItem
             key={i}
             val={i}
             skillDetails={skillDetails}
@@ -45,7 +46,7 @@ class SkillsList extends React.Component {
 
         return (
             <React.Fragment>
-                <Grid container spacing={24}>
+                <Grid container spacing={16}>
                     {listItems}
 
                 </Grid>

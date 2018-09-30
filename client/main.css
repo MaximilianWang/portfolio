@@ -1,6 +1,7 @@
 /*
   Global CSS file
 */
+@import url('https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i,700,700i');
 *{
 	margin: 0;
 	padding: 0;
@@ -29,6 +30,11 @@ input:-moz-placeholder {
 
 body {
 	background: #FFF;
-	font-family: 'Lato', sans-serif;
+	
+}
+
+
+body, h1, h2, h3, h4 {
+	font-family: 'Merriweather', sans-serif;
 	font-size: 16px;
 }

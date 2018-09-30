@@ -16,7 +16,7 @@ export default (
     <IndexRoute
       getComponent={(nextState, cb) => {
         require.ensure([], require => {
-          cb(null, require('./splash/SplashPage').default);
+          cb(null, require('./pages/splash/SplashPage').default);
         });
       }}
     />
@@ -24,7 +24,7 @@ export default (
       path="/about"
       getComponent={(nextState, cb) => {
         require.ensure([], require => {
-          cb(null, require('./about/About').default);
+          cb(null, require('./pages/about/About').default);
         });
       }}
     />
@@ -32,7 +32,15 @@ export default (
       path="/resume"
       getComponent={(nextState, cb) => {
         require.ensure([], require => {
-          cb(null, require('./resume/Resume').default);
+          cb(null, require('./pages/resume/Resume').default);
+        });
+      }}
+    />
+    <Route
+      path="/blog"
+      getComponent={(nextState, cb) => {
+        require.ensure([], require => {
+          cb(null, require('./pages/construction/UnderConstructionPage').default);
         });
       }}
     />
